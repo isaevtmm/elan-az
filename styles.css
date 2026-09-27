@@ -1,0 +1,403 @@
+/* ============================================================
+   elan.az — ana səhifə (Figma: pangea_PRO, frame 947:1920)
+   Bütün ölçülər Figma dizaynından birbaşa götürülüb (1440px).
+   ============================================================ */
+/* Inter 3.19 (Figma-dakı ilə eyni metrikalar) — SIL Open Font License, bax: assets/fonts/LICENSE.txt */
+@font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-SemiBold.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { background: #f5f5f5; }
+body {
+  font-family: 'Inter', sans-serif;
+  color: #181d27;
+  background: #f5f5f5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 744px;
+}
+a { color: inherit; text-decoration: none; }
+img, svg { display: block; }
+button { font: inherit; border: 0; background: none; cursor: pointer; color: inherit; }
+ul { list-style: none; }
+
+/* ---------- Yuxarı blok (header + axtarış), alt künclər 24px ---------- */
+.top { background: #fff; border-radius: 0 0 24px 24px; overflow: hidden; }
+
+/* ---------- Header (1440 x 68) ---------- */
+.header { background: #fff; }
+.header__inner { width: 1440px; margin: 0 auto; height: 68px; padding: 8px 86px; }
+.nav { width: 1252px; height: 52px; display: flex; align-items: center; justify-content: space-between; }
+.nav__left { display: flex; align-items: center; gap: 32px; height: 100%; }
+.logo img { width: 122.666px; height: 32px; }
+.nav__links { display: flex; align-items: center; gap: 16px; height: 100%; }
+.nav__link {
+  display: flex; align-items: center; height: 40px;
+  font-size: 14px; font-weight: 500; line-height: 17px; color: #535862; white-space: nowrap;
+}
+.nav__link--pasha { gap: 4px; }
+/* Figma-dakı dəqiq enlər (hərf enlərinin kəsr fərqi yığılmasın deyə) */
+.nav__links .nav__link:nth-child(1) { width: 65px; }
+.nav__links .nav__link:nth-child(2) { width: 43px; }
+.nav__links .nav__link:nth-child(3) { width: 139px; }
+.nav__links .nav__link:nth-child(4) { width: 73px; }
+.nav__links .nav__link:nth-child(5) { width: 140px; }
+.nav__right { display: flex; align-items: center; gap: 16px; height: 44px; }
+.nav__icons { display: flex; align-items: center; gap: 16px; height: 100%; }
+.nav__icon { display: flex; align-items: center; justify-content: center; height: 100%; padding: 0 4px; }
+.nav__heart { position: relative; width: 20px; height: 20px; overflow: hidden; }
+.nav__heart img { position: absolute; left: 1.666px; top: 2.5px; width: 17.0605px; height: 16.2509px; }
+.btn-add {
+  width: 152px; display: flex; align-items: center; gap: 8px; height: 44px; padding: 10px 16px;
+  border-radius: 8px; background: #f41b44; color: #fff;
+  font-size: 14px; font-weight: 600; line-height: 17px; white-space: nowrap; overflow: hidden;
+}
+.avatar {
+  width: 44px; height: 44px; border-radius: 32px; background: #f5f5f5; border: 1px solid #d5d7da;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 500; line-height: 17px; color: #181d27;
+}
+
+/* ---------- Axtarış bölməsi (1440 x 184) ---------- */
+.search { background: #fff; border-top: 1px solid #f5f5f5; }
+.search__inner { width: 1440px; margin: 0 auto; height: 183px; padding: 31px 156px 32px; display: flex; justify-content: center; }
+.search__box { width: 905px; display: flex; flex-direction: column; gap: 24px; }
+.searchbar {
+  height: 60px; display: flex; align-items: center; gap: 12px;
+  padding: 3px 7px 3px 1px; border: 1px solid #e9eaeb; border-radius: 48px; background: #fff;
+  box-shadow: 1px 1px 16px 4px rgba(18, 18, 18, 0.08); overflow: hidden;
+}
+.searchbar__item {
+  height: 52px; display: flex; align-items: center; justify-content: center; gap: 12px;
+  padding: 0 12px; border-radius: 44px; flex: none; overflow: hidden;
+}
+.searchbar__icon {
+  width: 36px; height: 36px; border-radius: 50px; background: #f5f5f5;
+  display: flex; align-items: center; justify-content: center; flex: none;
+}
+.searchbar__text { display: flex; flex-direction: column; gap: 2px; white-space: nowrap; }
+.searchbar__title { font-size: 14px; font-weight: 500; line-height: 17px; color: #121212; }
+.searchbar__sub { font-size: 12px; font-weight: 500; line-height: 15px; color: #717680; }
+.searchbar__item:nth-of-type(1) { width: 229px; }
+.searchbar__item:nth-of-type(2) { width: 196px; }
+.searchbar__item:nth-of-type(3) { width: 135px; }
+.searchbar__item:nth-of-type(4) { width: 129px; }
+.searchbar__sep { width: 1px; height: 40px; background: #e9eaeb; flex: none; }
+.searchbar__filter {
+  width: 119px; height: 48px; display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 0 20px; border-radius: 50px; background: #181d27; color: #fff;
+  font-size: 14px; font-weight: 500; line-height: 17px; white-space: nowrap; flex: none; overflow: hidden;
+}
+.chips { display: flex; justify-content: center; align-items: center; gap: 12px; height: 36px; }
+.chip {
+  height: 36px; display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 0 12px; border-radius: 50px; background: #f5f5f5;
+  font-size: 14px; font-weight: 500; line-height: 17px; color: #181d27; white-space: nowrap; flex: none; overflow: hidden;
+}
+
+/* ---------- Elanlar bölməsi (1440 x 2141) ---------- */
+.listings {
+  margin: 8px 0 0; background: #fff; border-radius: 24px;
+  border-top: 1px solid #f5f5f5; padding: 23px 0 24px;
+  display: flex; flex-direction: column; align-items: center; gap: 32px;
+}
+.block { width: 1088px; display: flex; flex-direction: column; gap: 20px; }
+.block__head { height: 32px; display: flex; align-items: center; justify-content: space-between; }
+.block__title { font-size: 16px; font-weight: 600; line-height: 19px; color: #181d27; white-space: nowrap; }
+.block__more { display: flex; align-items: center; gap: 24px; }
+.block__link {
+  font-size: 14px; font-weight: 500; line-height: 17px; color: #535862; white-space: nowrap;
+  text-decoration: underline; text-decoration-skip-ink: none; text-underline-position: from-font;
+}
+.block__arrows { display: flex; align-items: center; gap: 8px; }
+.arrow { width: 32px; height: 32px; padding: 2px; border-radius: 50px; background: #e9eaeb; display: flex; align-items: center; overflow: hidden; }
+.arrow__inner { width: 28px; height: 28px; border-radius: 50px; display: flex; align-items: center; justify-content: center; }
+.arrow__inner img { transform: rotate(-90deg) scaleY(-1); }
+.arrow--prev .arrow__inner { transform: rotate(180deg) scaleY(-1); }
+.cards { display: grid; grid-template-columns: repeat(4, 260px); gap: 20px 16px; align-items: start; }
+
+.card { width: 260px; display: flex; flex-direction: column; gap: 8px; overflow: hidden; flex: none; }
+.card__img { position: relative; width: 260px; height: 164px; border-radius: 16px; overflow: hidden; }
+.card__img img { width: 100%; height: 100%; object-fit: cover; }
+.card__img--crop img { position: absolute; width: 100%; height: 118.9%; left: 0.11%; top: 0.29%; object-fit: fill; }
+.card__fav { position: absolute; top: 0; right: 0; width: 44px; height: 44px; padding: 10px; border-radius: 120px; display: flex; align-items: center; justify-content: center; }
+.card__fav img { width: 24px; height: 24px; object-fit: none; }
+.card__body { width: 100%; display: flex; flex-direction: column; justify-content: center; gap: 4px; }
+.card__row { width: 100%; height: 19px; display: flex; align-items: center; justify-content: space-between; }
+.card__price { font-size: 16px; font-weight: 700; line-height: 19px; color: #181d27; white-space: nowrap; }
+.card__badges { display: flex; align-items: center; gap: 4px; }
+.card__badges img { width: 16px; height: 16px; }
+.card__name { width: 100%; font-size: 14px; font-weight: 500; line-height: 17px; color: #181d27; }
+.card__addr { font-size: 14px; font-weight: 400; line-height: 17px; color: #717680; white-space: nowrap; }
+.card__specs { width: 100%; display: flex; align-items: center; font-size: 14px; font-weight: 400; line-height: 17px; color: #717680; white-space: nowrap; }
+.dot { position: relative; padding-left: 21px; }
+.dot::before { content: ""; position: absolute; left: 8px; top: 8px; width: 4px; height: 4px; border-radius: 50%; background: currentColor; }
+.sup { font-size: 9.03px; line-height: 0; position: relative; top: -4px; }
+.card__meta { width: 100%; display: flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 400; line-height: 17px; color: #717680; white-space: nowrap; }
+.card__meta img { width: 16px; height: 16px; }
+.card__foot { width: 100%; height: 16px; display: flex; align-items: center; justify-content: space-between; }
+.card__date { font-size: 12px; font-weight: 400; line-height: 15px; color: #717680; white-space: nowrap; }
+
+/* ---------- Populyar axtarışlar (1440 x 599) ---------- */
+.popular {
+  position: relative; margin: 8px 0 0; background: #fff;
+  border-radius: 20px 20px 0 0; padding: 48px 0;
+  display: flex; flex-direction: column; align-items: center;
+}
+.popular__inner { width: 1128px; display: flex; flex-direction: column; align-items: flex-start; gap: 40px; }
+.popular__tail { position: absolute; left: 0; right: 0; bottom: -10px; height: 20px; background: #fff; }
+.popular__title { width: 100%; font-size: 24px; font-weight: 600; line-height: 29px; color: #181d27; }
+.popular__grid { width: 1128px; display: grid; grid-template-columns: 196px repeat(5, minmax(0, 1fr)); row-gap: 56px; align-items: start; background: #fff; }
+.plist { width: 100%; height: 189px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.plist li { font-size: 14px; font-weight: 400; line-height: 17px; color: #535862; white-space: nowrap; }
+.plist__head { font-weight: 600 !important; color: #181d27 !important; }
+.plist li.plist__all { font-size: 12px; line-height: 15px; }
+.plist__all a {
+  font-size: 12px; font-weight: 600; line-height: 15px; color: #ff2d55;
+  text-decoration: underline; text-decoration-skip-ink: none; text-underline-position: from-font;
+}
+
+/* ---------- Tətbiq banneri (1440 x 356) ---------- */
+.app { background: #fff; border-radius: 20px; padding: 16px 0; overflow: hidden; display: flex; justify-content: center; }
+.banner {
+  position: relative; width: 1128px; height: 324px; border-radius: 32px; overflow: hidden;
+  background: linear-gradient(90deg, #ff2d55 0%, #ff2d50 36.058%, #ffaa59 100%);
+}
+.banner__e242 { position: absolute; left: 404px; top: -373px; width: 451px; height: 451px; }
+/* QR + dekorativ dairələr + telefon bir qrupdadır (planşetdə bütöv kiçilir) */
+.banner__art { position: absolute; left: 571px; top: 0; width: 542px; height: 326px; }
+.banner__qr { position: absolute; left: 0; top: 13px; width: 306px; height: 280px; object-fit: cover; }
+.banner__e240 { position: absolute; left: 153px; top: 117px; width: 451px; height: 451px; }
+.banner__e241 { position: absolute; left: 437px; top: -74px; width: 157px; height: 157px; }
+.banner__phone { position: absolute; left: 220px; top: 0; width: 322px; height: 326px; overflow: hidden; }
+.banner__phone img { position: absolute; width: 132.36%; height: 163.51%; left: -32.17%; top: -28.04%; }
+.banner__content {
+  position: absolute; left: 64px; top: 50%; transform: translateY(-50%); width: 335px; min-height: 40px;
+  display: flex; flex-direction: column; justify-content: flex-end; gap: 20px; overflow: hidden;
+}
+.banner__title { font-size: 36px; font-weight: 600; line-height: 44px; color: #fff; white-space: nowrap; }
+.banner__text { font-size: 14px; font-weight: 500; line-height: 17px; color: #fff; }
+.banner__buttons { width: 100%; display: flex; align-items: flex-start; gap: 16px; }
+.store {
+  height: 48px; max-width: 253.89px; display: flex; align-items: center; justify-content: center; gap: 12px;
+  padding: 10px 16px; border-radius: 12px; background: #fff; backdrop-filter: blur(12px); overflow: hidden; flex: none;
+}
+.store__content { display: flex; flex-direction: column; align-items: flex-start; color: #181d27; }
+.store__content--gp { gap: 3px; }
+.store__content--as { width: 78px; }
+.store__sub { font-size: 10px; font-weight: 500; line-height: 12px; white-space: nowrap; }
+.store__gp { width: 74px; height: 15px; transform: scaleY(-1); }
+.store__name { width: 100%; font-size: 14px; font-weight: 600; line-height: 17px; }
+
+/* ---------- Footer (1440 x 374) ---------- */
+.footer { background: #fff; padding: 40px 0; display: flex; flex-direction: column; align-items: center; }
+.footer__inner { width: 1128px; display: flex; flex-direction: column; }
+.footer__top { width: 1128px; display: flex; flex-direction: column; gap: 24px; }
+.footer__logo { height: 56px; padding: 12px 0; display: flex; align-items: center; }
+.footer__logo img { width: 122.666px; height: 32px; }
+.footer__cols { width: 100%; display: flex; align-items: flex-start; gap: 76px; }
+.footer__links { display: flex; align-items: flex-start; gap: 76px; }
+.fcol { width: 190px; display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+.fcol li { width: 100%; font-size: 14px; font-weight: 400; line-height: 17px; color: #535862; }
+.fcol__head { font-weight: 600 !important; color: #121212 !important; }
+.fcol__head--dark { color: #181d27 !important; }
+.footer__right { flex: 1 0 0; min-width: 1px; align-self: stretch; display: flex; align-items: flex-start; gap: 40px; }
+.footer__social, .footer__contact { flex: 1 0 0; min-width: 1px; display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+.footer h5 { width: 100%; font-size: 14px; font-weight: 600; line-height: 17px; color: #282d3c; }
+.social { display: flex; align-items: center; gap: 16px; }
+.social__link { width: 36px; height: 36px; border-radius: 12px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; }
+.btn-write {
+  width: 161px; height: 44px; display: flex; align-items: center; gap: 8px; padding: 12px 32px; border-radius: 12px; background: #f41b44;
+  color: #fff; font-size: 14px; font-weight: 600; line-height: 17px; white-space: nowrap; overflow: hidden;
+}
+.footer__contact p { width: 100%; font-size: 14px; font-weight: 400; line-height: 17px; color: #a4a7ae; }
+.footer__bottom { width: 100%; display: flex; align-items: center; justify-content: space-between; padding-top: 48px; font-size: 14px; font-weight: 400; line-height: 17px; color: #a4a7ae; white-space: nowrap; }
+.footer__contacts { display: flex; align-items: center; gap: 24px; color: #717680; }
+.footer__contacts span { display: flex; align-items: center; gap: 4px; }
+.footer__contacts span:nth-child(1) { width: 136px; }
+.footer__contacts span:nth-child(2) { width: 118px; }
+
+/* ---------- Üzən çat düyməsi (60 x 60) ---------- */
+.chat {
+  position: fixed; right: 32px; bottom: 32px; z-index: 10;
+  width: 60px; height: 60px; border-radius: 50px; padding: 10px 12px;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(90deg, #ffaa59 0%, #ff2d50 36.058%, #ffaa59 100%);
+  box-shadow: inset 0 12px 24px 4px rgba(255, 255, 255, 0.32),
+              0 4px 4px -4px rgba(12, 12, 13, 0.05),
+              0 16px 32px -4px rgba(12, 12, 13, 0.10);
+}
+.chat__icon { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.chat__icon img { width: 25px; height: 25px; }
+
+/* ---------- Burger + yan menyu (yalnız <950px görünür) ---------- */
+.burger { display: none; width: 44px; height: 44px; align-items: center; justify-content: center; border-radius: 8px; margin-left: -10px; }
+.drawer { display: none; position: fixed; inset: 0; z-index: 100; visibility: hidden; }
+.drawer.is-open { visibility: visible; }
+.drawer__backdrop { position: absolute; inset: 0; background: rgba(18, 18, 18, 0.4); opacity: 0; transition: opacity 0.25s ease; }
+.drawer.is-open .drawer__backdrop { opacity: 1; }
+.drawer__panel {
+  position: absolute; top: 0; left: 0; bottom: 0; width: 320px; max-width: 85vw; background: #fff; overflow-y: auto;
+  padding: 8px 20px 24px; display: flex; flex-direction: column;
+  transform: translateX(-100%); transition: transform 0.25s ease;
+}
+.drawer.is-open .drawer__panel { transform: none; }
+.drawer__head { height: 52px; display: flex; align-items: center; justify-content: space-between; }
+.drawer__head img { width: 122.666px; height: 32px; }
+.drawer__close { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 8px; margin-right: -12px; }
+.drawer__user { display: flex; align-items: center; gap: 12px; padding: 12px 0; }
+.drawer__user b { display: block; font-size: 14px; font-weight: 600; line-height: 17px; color: #181d27; }
+.drawer__user small { display: block; font-size: 12px; font-weight: 400; line-height: 15px; color: #717680; margin-top: 2px; }
+.drawer__cta { width: 100%; justify-content: center; margin: 4px 0 12px; }
+.drawer__divider { height: 1px; background: #f5f5f5; margin: 8px 0; }
+.drawer__nav a, .drawer__tools a { display: flex; align-items: center; gap: 12px; height: 44px; font-size: 14px; font-weight: 500; line-height: 17px; color: #181d27; }
+.drawer__tools a { color: #535862; }
+body.drawer-open { overflow: hidden; }
+
+/* ============================================================
+   RESPONSİV — tap.az məntiqi ilə
+   ≥1440px : Figma dizaynı olduğu kimi
+   1300–1439: axıcı, 4 sütun
+   950–1299 : 3 sütun (tap.az ~1300-dən aşağı 3 sütuna keçir), header kompakt / iki sıralı
+   744–949  : mobil-tipli header (☰ | loqo | +), tam enli axtarış, sürüşən çip lenti, 3 sütun
+   <744     : telefon (tap.az-da 2 sütun) — bu layihədə yoxdur
+   ============================================================ */
+@media (max-width: 1439.98px) {
+  :root { --pad: 32px; }
+  .header__inner { width: auto; padding: 8px var(--pad); }
+  .nav { width: 100%; }
+  .search__inner { width: auto; padding: 31px var(--pad) 32px; }
+  .search__box { width: 100%; max-width: 905px; }
+
+  .block { width: auto; align-self: stretch; padding: 0 var(--pad); }
+  .cards { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .card { width: auto; }
+  .card__img { width: 100%; height: auto; aspect-ratio: 260 / 164; }
+  .card__name, .card__addr { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .card__specs { display: block; overflow: hidden; text-overflow: ellipsis; }
+
+  .popular__inner { width: auto; align-self: stretch; padding: 0 var(--pad); }
+  .popular__grid { width: 100%; grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .plist li { max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
+
+  .app { padding: 16px var(--pad); }
+  .banner { width: 100%; }
+  .banner__e242 { left: auto; right: 273px; }
+  .banner__art { left: auto; right: 15px; }
+
+  .footer__inner { width: auto; align-self: stretch; padding: 0 var(--pad); }
+  .footer__top { width: 100%; }
+  .footer__cols { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px; }
+  .footer__links, .footer__right { display: contents; }
+  .fcol { width: auto; }
+}
+
+/* ---------- 950–1299px: 3 sütun, kompakt header ---------- */
+@media (max-width: 1299.98px) {
+  .nav__left { gap: 24px; }
+  .nav__links, .nav__icons, .nav__right { gap: 12px; }
+
+  .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  /* Kompleks / agentlik sıraları: 3 kart görünür, 4-cü ox və ya sürüşdürmə ilə */
+  .cards--scroll {
+    display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
+    margin: 0 calc(-1 * var(--pad)); padding: 0 var(--pad); scroll-padding: 0 var(--pad);
+  }
+  .cards--scroll::-webkit-scrollbar { display: none; }
+  .cards--scroll .card { flex: 0 0 calc((100% - 32px) / 3); scroll-snap-align: start; }
+  .arrow:disabled { opacity: 0.4; cursor: default; }
+
+  .popular__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); row-gap: 40px; }
+  .plist { height: auto; }
+}
+
+@media (max-width: 1199.98px) {
+  /* Header iki sıra: 1) loqo + ikonlar + "Elan yerləşdir" + avatar, 2) linklər */
+  .header__inner { height: auto; padding: 8px var(--pad) 0; }
+  .nav {
+    height: auto; display: grid; grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: "logo right" "links links"; align-items: center;
+  }
+  .nav__left { display: contents; }
+  .logo { grid-area: logo; }
+  .nav__right { grid-area: right; height: 52px; gap: 16px; }
+  .nav__icons { gap: 16px; }
+  .nav__links { grid-area: links; height: 44px; gap: 16px; margin-top: 8px; border-top: 1px solid #f5f5f5; }
+  .banner__content { left: 40px; }
+}
+
+@media (max-width: 1023.98px) {
+  :root { --pad: 24px; }
+  /* Axtarış paneli bir sırada qalır, daxili aralıqlar sıxlaşır (950px-də də sığır); çiplər bükülə bildiyi üçün hündürlük avtomatik */
+  .search__inner { height: auto; }
+  .search__box { max-width: 861px; }
+  .searchbar { gap: 8px; }
+  .searchbar__item { padding: 0 10px; }
+  .searchbar__item:nth-of-type(1) { width: 225px; }
+  .searchbar__item:nth-of-type(2) { width: 192px; }
+  .searchbar__item:nth-of-type(3) { width: 131px; }
+  .searchbar__item:nth-of-type(4) { width: 125px; }
+  .chips { height: auto; flex-wrap: wrap; row-gap: 12px; }
+}
+
+/* ---------- 744–949px: tap.az-ın mobil-tipli planşet layoutu ---------- */
+@media (max-width: 949.98px) {
+  /* Header: ☰ | loqo ortada | + və avatar. Linklər və alət ikonları yan menyuya keçir */
+  .header__inner { height: 68px; padding: 8px var(--pad); }
+  .nav {
+    height: 52px; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    grid-template-areas: "burger logo right"; align-items: center;
+  }
+  .burger { display: flex; grid-area: burger; justify-self: start; }
+  .logo { grid-area: logo; justify-self: center; }
+  .nav__links, .nav__icons { display: none; }
+  .nav__right { grid-area: right; justify-self: end; height: 44px; gap: 8px; }
+  .nav .btn-add { width: 44px; padding: 0; justify-content: center; }
+  .nav .btn-add__text { display: none; }
+  .drawer { display: block; }
+
+  /* Axtarış: tam en, 2 sıra: [Rayon | Əmlakın növü] / [Otaq sayı | Qiymət], Filterlər sağda */
+  .search__inner { height: auto; }
+  .search__box { max-width: none; }
+  .searchbar {
+    height: auto; display: grid; grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr) auto;
+    grid-template-rows: 52px 1px 52px; column-gap: 12px; border-radius: 32px;
+  }
+  .searchbar > :nth-child(1) { grid-area: 1 / 1; }
+  .searchbar > :nth-child(2) { grid-area: 1 / 2; align-self: center; }
+  .searchbar > :nth-child(3) { grid-area: 1 / 3; }
+  .searchbar > :nth-child(4) { grid-area: 2 / 1 / 3 / 4; width: auto; height: 1px; }
+  .searchbar > :nth-child(5) { grid-area: 3 / 1; }
+  .searchbar > :nth-child(6) { grid-area: 3 / 2; align-self: center; }
+  .searchbar > :nth-child(7) { grid-area: 3 / 3; }
+  .searchbar > :nth-child(8) { grid-area: 1 / 4 / 4 / 5; align-self: center; }
+  .searchbar .searchbar__item { width: auto; min-width: 0; padding: 0 12px; justify-content: flex-start; }
+  .searchbar__text { min-width: 0; }
+  .searchbar__title, .searchbar__sub { overflow: hidden; text-overflow: ellipsis; }
+
+  /* Çiplər: tap.az kateqoriya lenti kimi — bir sıra, üfüqi sürüşür, ekran kənarına çıxır */
+  .chips { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; margin: 0 calc(-1 * var(--pad)); padding: 0 var(--pad); scroll-snap-type: x proximity; }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip { scroll-snap-align: start; }
+
+  .popular__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+  .banner__content { width: 300px; }
+  .banner__art { width: min(542px, calc(100% - 371px)); height: auto; aspect-ratio: 542 / 326; top: auto; bottom: 0; }
+  .banner__qr { top: 3.99%; width: 56.46%; height: 85.89%; }
+  .banner__e240 { left: 28.23%; top: 35.89%; width: 83.21%; height: auto; }
+  .banner__e241 { left: 80.63%; top: -22.7%; width: 28.97%; height: auto; }
+  .banner__phone { left: 40.59%; width: 59.41%; height: 100%; }
+
+  .footer__cols { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 24px; }
+  .chat { right: 24px; bottom: 24px; }
+}
+
+/* Dar kartlarda (< 240px) xüsusiyyət sətri sığsın deyə nöqtə aralığı azalır */
+.card { container-type: inline-size; }
+@container (max-width: 239.98px) {
+  .dot { padding-left: 16px; }
+  .dot::before { left: 6px; }
+}

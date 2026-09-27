@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elan.az</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Yuxarı blok: header + axtarış (ağ, alt künclər 24px) -->
+  <div class="top">
+  <header class="header">
+    <div class="header__inner">
+      <nav class="nav">
+        <button class="burger" type="button" aria-label="Menyu" aria-controls="drawer" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#181d27" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="nav__left">
+          <a class="logo" href="#"><img src="assets/logo.svg" alt="elan.az"></a>
+          <div class="nav__links">
+            <a class="nav__link" href="#">Alqı-satqı</a>
+            <a class="nav__link" href="#">Kirayə</a>
+            <a class="nav__link" href="#">Yaşayış kompleksləri</a>
+            <a class="nav__link" href="#">Agentliklər</a>
+            <a class="nav__link nav__link--pasha" href="#"><img src="assets/pasha.png" width="16" height="16" alt="">Pasha Real Estate</a>
+          </div>
+        </div>
+        <div class="nav__right">
+          <div class="nav__icons">
+            <a class="nav__icon" href="#" aria-label="Müqayisə"><img src="assets/scale.svg" width="20" height="20" alt=""></a>
+            <a class="nav__icon" href="#" aria-label="Dil"><img src="assets/network-world.svg" width="20" height="20" alt=""></a>
+            <a class="nav__icon" href="#" aria-label="Valyuta"><img src="assets/coin-swap.svg" width="20" height="20" alt=""></a>
+            <a class="nav__icon" href="#" aria-label="Mesajlar"><img src="assets/square-message.svg" width="20" height="20" alt=""></a>
+            <a class="nav__icon" href="#" aria-label="Seçilmişlər"><span class="nav__heart"><img src="assets/heart-outline.svg" alt=""></span></a>
+          </div>
+          <a class="btn-add" href="#" aria-label="Elan yerləşdir"><img src="assets/plus.svg" width="20" height="20" alt=""><span class="btn-add__text">Elan yerləşdir</span></a>
+          <a class="avatar" href="#">NT</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Axtarış -->
+  <section class="search">
+    <div class="search__inner">
+      <div class="search__box">
+        <div class="searchbar">
+          <div class="searchbar__item">
+            <span class="searchbar__icon"><img src="assets/location.svg" width="20" height="20" alt=""></span>
+            <span class="searchbar__text"><span class="searchbar__title">Rayon, metro, nişangah</span><span class="searchbar__sub">Hamısı</span></span>
+          </div>
+          <span class="searchbar__sep"></span>
+          <div class="searchbar__item">
+            <span class="searchbar__icon"><img src="assets/building-office.svg" width="20" height="20" alt=""></span>
+            <span class="searchbar__text"><span class="searchbar__title">Əmlakın növü</span><span class="searchbar__sub">Mənzil, həyət evi, ofis</span></span>
+          </div>
+          <span class="searchbar__sep"></span>
+          <div class="searchbar__item">
+            <span class="searchbar__icon"><img src="assets/exit.svg" width="20" height="20" alt=""></span>
+            <span class="searchbar__text"><span class="searchbar__title">Otaq sayı</span><span class="searchbar__sub">Fərq etmir</span></span>
+          </div>
+          <span class="searchbar__sep"></span>
+          <div class="searchbar__item">
+            <span class="searchbar__icon"><img src="assets/coins.svg" width="20" height="20" alt=""></span>
+            <span class="searchbar__text"><span class="searchbar__title">Qiymət</span><span class="searchbar__sub">min-maks</span></span>
+          </div>
+          <button class="searchbar__filter" type="button"><img src="assets/filter.svg" width="20" height="20" alt="">Filterlər</button>
+        </div>
+        <div class="chips">
+          <button class="chip" type="button" style="width:125px"><img src="assets/chip-building-1.svg" width="20" height="20" alt="">Köhnə tikili</button>
+          <button class="chip" type="button" style="width:112px"><img src="assets/chip-building-2.svg" width="20" height="20" alt="">Yeni tikili</button>
+          <button class="chip" type="button" style="width:177px"><img src="assets/chip-home-1.svg" width="20" height="20" alt="">Həyət evi / Bağ evi</button>
+          <button class="chip" type="button" style="width:79px"><img src="assets/chip-building-3.svg" width="20" height="20" alt="">Ofis</button>
+          <button class="chip" type="button" style="width:88px"><img src="assets/chip-home-2.svg" width="20" height="20" alt="">Qaraj</button>
+          <button class="chip" type="button" style="width:100px"><img src="assets/chip-map.svg" width="20" height="20" alt="">Torpaq</button>
+          <button class="chip" type="button" style="width:141px"><img src="assets/chip-pie-chart.svg" width="20" height="20" alt="">Hazır ipoteka</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <!-- Elanlar -->
+  <section class="listings">
+    <div class="block">
+
+      <div class="block__head">
+        <h2 class="block__title">Yaşayış kompleksləri</h2>
+        <div class="block__more">
+          <a class="block__link" href="#">Daha çox</a>
+          <div class="block__arrows">
+            <button class="arrow arrow--prev" type="button" aria-label="Əvvəlki"><span class="arrow__inner"><img src="assets/arrow.svg" width="16" height="16" alt=""></span></button>
+            <button class="arrow arrow--next" type="button" aria-label="Növbəti"><span class="arrow__inner"><img src="assets/arrow.svg" width="16" height="16" alt=""></span></button>
+          </div>
+        </div>
+      </div>
+      <div class="cards cards--scroll">
+        <article class="card">
+          <div class="card__img"><img src="assets/complex-1.png" alt=""></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼-dan</span><span class="card__badges"><img src="assets/card-building.svg" alt=""></span></div>
+            <div class="card__name">White Garden</div>
+            <div class="card__addr">Bakı şəhəri, Xətai r., Ağ Şəhər, Xəqa...</div>
+            <div class="card__specs"><span>2 Bina</span><span class="dot">32 Mənzil</span><span class="dot">58-120m<span class="sup">2</span></span></div>
+            <div class="card__meta"><img src="assets/key.svg" alt=""><span>Təhvil tarixi: 2026</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><img src="assets/complex-2.png" alt=""></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼-dan</span><span class="card__badges"><img src="assets/card-building.svg" alt=""></span></div>
+            <div class="card__name">White Garden</div>
+            <div class="card__addr">Bakı şəhəri, Xətai r., Ağ Şəhər, Xəqa...</div>
+            <div class="card__specs"><span>2 Bina</span><span class="dot">32 Mənzil</span><span class="dot">58-120m<span class="sup">2</span></span></div>
+            <div class="card__meta"><img src="assets/key.svg" alt=""><span>Təhvil tarixi: 2026</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img card__img--crop"><img src="assets/complex-3.png" alt=""></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼-dan</span><span class="card__badges"><img src="assets/card-building.svg" alt=""></span></div>
+            <div class="card__name">White Garden</div>
+            <div class="card__addr">Bakı şəhəri, Xətai r., Ağ Şəhər, Xəqa...</div>
+            <div class="card__specs"><span>2 Bina</span><span class="dot">32 Mənzil</span><span class="dot">58-120m<span class="sup">2</span></span></div>
+            <div class="card__meta"><img src="assets/key.svg" alt=""><span>Təhvil tarixi: 2026</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><img src="assets/complex-4.png" alt=""></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼-dan</span><span class="card__badges"><img src="assets/card-building.svg" alt=""></span></div>
+            <div class="card__name">White Garden</div>
+            <div class="card__addr">Bakı şəhəri, Xətai r., Ağ Şəhər, Xəqa...</div>
+            <div class="card__specs"><span>2 Bina</span><span class="dot">32 Mənzil</span><span class="dot">58-120m<span class="sup">2</span></span></div>
+            <div class="card__meta"><img src="assets/key.svg" alt=""><span>Təhvil tarixi: 2026</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="block__head">
+        <h2 class="block__title">Agentliklər</h2>
+        <div class="block__more">
+          <a class="block__link" href="#">Daha çox</a>
+          <div class="block__arrows">
+            <button class="arrow arrow--prev" type="button" aria-label="Əvvəlki"><span class="arrow__inner"><img src="assets/arrow.svg" width="16" height="16" alt=""></span></button>
+            <button class="arrow arrow--next" type="button" aria-label="Növbəti"><span class="arrow__inner"><img src="assets/arrow.svg" width="16" height="16" alt=""></span></button>
+          </div>
+        </div>
+      </div>
+      <div class="cards cards--scroll">
+        <article class="card">
+          <div class="card__img"><img src="assets/agency-1.png" alt=""><button class="card__fav" type="button" aria-label="Seçilmişlərə əlavə et"><img src="assets/heart-card.svg" alt=""></button></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼</span><span class="card__badges"><img src="assets/card-building-2.svg" alt=""><img src="assets/work.svg" alt=""><img src="assets/discount.svg" alt=""><img src="assets/document.svg" alt=""></span></div>
+            <div class="card__name">Baku City Residence Olimpik</div>
+            <div class="card__specs"><span>3 otaqlı</span><span class="dot">136 m</span><span class="dot">12/18 mərtəbə</span></div>
+            <div class="card__foot"><span class="card__date">Bakı, bu gün 12:42</span><span class="card__badges"><img src="assets/diamond.svg" alt=""><img src="assets/crown.svg" alt=""></span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><img src="assets/agency-2.png" alt=""><button class="card__fav" type="button" aria-label="Seçilmişlərə əlavə et"><img src="assets/heart-card.svg" alt=""></button></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼</span><span class="card__badges"><img src="assets/card-building-2.svg" alt=""><img src="assets/work.svg" alt=""><img src="assets/discount.svg" alt=""><img src="assets/document.svg" alt=""></span></div>
+            <div class="card__name">Baku City Residence Olimpik</div>
+            <div class="card__specs"><span>3 otaqlı</span><span class="dot">136 m</span><span class="dot">12/18 mərtəbə</span></div>
+            <div class="card__foot"><span class="card__date">Bakı, bu gün 12:42</span><span class="card__badges"><img src="assets/diamond.svg" alt=""><img src="assets/crown.svg" alt=""></span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><img src="assets/agency-3.png" alt=""><button class="card__fav" type="button" aria-label="Seçilmişlərə əlavə et"><img src="assets/heart-card.svg" alt=""></button></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼</span><span class="card__badges"><img src="assets/card-building-2.svg" alt=""><img src="assets/work.svg" alt=""><img src="assets/discount.svg" alt=""><img src="assets/document.svg" alt=""></span></div>
+            <div class="card__name">Baku City Residence Olimpik</div>
+            <div class="card__specs"><span>3 otaqlı</span><span class="dot">136 m</span><span class="dot">12/18 mərtəbə</span></div>
+            <div class="card__foot"><span class="card__date">Bakı, bu gün 12:42</span><span class="card__badges"><img src="assets/diamond.svg" alt=""><img src="assets/crown.svg" alt=""></span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><img src="assets/agency-4.png" alt=""><button class="card__fav" type="button" aria-label="Seçilmişlərə əlavə et"><img src="assets/heart-card.svg" alt=""></button></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼</span><span class="card__badges"><img src="assets/card-building-2.svg" alt=""><img src="assets/work.svg" alt=""><img src="assets/discount.svg" alt=""><img src="assets/document.svg" alt=""></span></div>
+            <div class="card__name">Baku City Residence Olimpik</div>
+            <div class="card__specs"><span>3 otaqlı</span><span class="dot">136 m</span><span class="dot">12/18 mərtəbə</span></div>
+            <div class="card__foot"><span class="card__date">Bakı, bu gün 12:42</span><span class="card__badges"><img src="assets/diamond.svg" alt=""><img src="assets/crown.svg" alt=""></span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="block__head">
+        <h2 class="block__title">Premium elanlar</h2>
+        <div class="block__more">
+          <a class="block__link" href="#">Daha çox</a>
+          <div class="block__arrows">
+            <button class="arrow arrow--prev" type="button" aria-label="Əvvəlki"><span class="arrow__inner"><img src="assets/arrow.svg" width="16" height="16" alt=""></span></button>
+            <button class="arrow arrow--next" type="button" aria-label="Növbəti"><span class="arrow__inner"><img src="assets/arrow.svg" width="16" height="16" alt=""></span></button>
+          </div>
+        </div>
+      </div>
+      <div class="cards cards--premium">
+        <article class="card">
+          <div class="card__img"><img src="assets/premium-1-1.png" alt=""><button class="card__fav" type="button" aria-label="Seçilmişlərə əlavə et"><img src="assets/heart-card.svg" alt=""></button></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼</span><span class="card__badges"><img src="assets/card-building-2.svg" alt=""><img src="assets/work.svg" alt=""><img src="assets/discount.svg" alt=""><img src="assets/document.svg" alt=""></span></div>
+            <div class="card__name">Baku City Residence Olimpik</div>
+            <div class="card__specs"><span>3 otaqlı</span><span class="dot">136 m</span><span class="dot">12/18 mərtəbə</span></div>
+            <div class="card__foot"><span class="card__date">Bakı, bu gün 12:42</span><span class="card__badges"><img src="assets/diamond.svg" alt=""><img src="assets/crown.svg" alt=""></span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><img src="assets/premium-1-2.png" alt=""><button class="card__fav" type="button" aria-label="Seçilmişlərə əlavə et"><img src="assets/heart-card.svg" alt=""></button></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼</span><span class="card__badges"><img src="assets/card-building-2.svg" alt=""><img src="assets/work.svg" alt=""><img src="assets/discount.svg" alt=""><img src="assets/document.svg" alt=""></span></div>
+            <div class="card__name">Baku City Residence Olimpik</div>
+            <div class="card__specs"><span>3 otaqlı</span><span class="dot">136 m</span><span class="dot">12/18 mərtəbə</span></div>
+            <div class="card__foot"><span class="card__date">Bakı, bu gün 12:42</span><span class="card__badges"><img src="assets/diamond.svg" alt=""><img src="assets/crown.svg" alt=""></span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><img src="assets/premium-1-3.png" alt=""><button class="card__fav" type="button" aria-label="Seçilmişlərə əlavə et"><img src="assets/heart-card.svg" alt=""></button></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼</span><span class="card__badges"><img src="assets/card-building-2.svg" alt=""><img src="assets/work.svg" alt=""><img src="assets/discount.svg" alt=""><img src="assets/document.svg" alt=""></span></div>
+            <div class="card__name">Baku City Residence Olimpik</div>
+            <div class="card__specs"><span>3 otaqlı</span><span class="dot">136 m</span><span class="dot">12/18 mərtəbə</span></div>
+            <div class="card__foot"><span class="card__date">Bakı, bu gün 12:42</span><span class="card__badges"><img src="assets/diamond.svg" alt=""><img src="assets/crown.svg" alt=""></span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><img src="assets/premium-1-4.png" alt=""><button class="card__fav" type="button" aria-label="Seçilmişlərə əlavə et"><img src="assets/heart-card.svg" alt=""></button></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼</span><span class="card__badges"><img src="assets/card-building-2.svg" alt=""><img src="assets/work.svg" alt=""><img src="assets/discount.svg" alt=""><img src="assets/document.svg" alt=""></span></div>
+            <div class="card__name">Baku City Residence Olimpik</div>
+            <div class="card__specs"><span>3 otaqlı</span><span class="dot">136 m</span><span class="dot">12/18 mərtəbə</span></div>
+            <div class="card__foot"><span class="card__date">Bakı, bu gün 12:42</span><span class="card__badges"><img src="assets/diamond.svg" alt=""><img src="assets/crown.svg" alt=""></span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><img src="assets/premium-2-1.png" alt=""><button class="card__fav" type="button" aria-label="Seçilmişlərə əlavə et"><img src="assets/heart-card.svg" alt=""></button></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼</span><span class="card__badges"><img src="assets/card-building-2.svg" alt=""><img src="assets/work.svg" alt=""><img src="assets/discount.svg" alt=""><img src="assets/document.svg" alt=""></span></div>
+            <div class="card__name">Baku City Residence Olimpik</div>
+            <div class="card__specs"><span>3 otaqlı</span><span class="dot">136 m</span><span class="dot">12/18 mərtəbə</span></div>
+            <div class="card__foot"><span class="card__date">Bakı, bu gün 12:42</span><span class="card__badges"><img src="assets/diamond.svg" alt=""><img src="assets/crown.svg" alt=""></span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><img src="assets/premium-2-2.png" alt=""><button class="card__fav" type="button" aria-label="Seçilmişlərə əlavə et"><img src="assets/heart-card.svg" alt=""></button></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼</span><span class="card__badges"><img src="assets/card-building-2.svg" alt=""><img src="assets/work.svg" alt=""><img src="assets/discount.svg" alt=""><img src="assets/document.svg" alt=""></span></div>
+            <div class="card__name">Baku City Residence Olimpik</div>
+            <div class="card__specs"><span>3 otaqlı</span><span class="dot">136 m</span><span class="dot">12/18 mərtəbə</span></div>
+            <div class="card__foot"><span class="card__date">Bakı, bu gün 12:42</span><span class="card__badges"><img src="assets/diamond.svg" alt=""><img src="assets/crown.svg" alt=""></span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><img src="assets/premium-2-3.png" alt=""><button class="card__fav" type="button" aria-label="Seçilmişlərə əlavə et"><img src="assets/heart-card.svg" alt=""></button></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼</span><span class="card__badges"><img src="assets/card-building-2.svg" alt=""><img src="assets/work.svg" alt=""><img src="assets/discount.svg" alt=""><img src="assets/document.svg" alt=""></span></div>
+            <div class="card__name">Baku City Residence Olimpik</div>
+            <div class="card__specs"><span>3 otaqlı</span><span class="dot">136 m</span><span class="dot">12/18 mərtəbə</span></div>
+            <div class="card__foot"><span class="card__date">Bakı, bu gün 12:42</span><span class="card__badges"><img src="assets/diamond.svg" alt=""><img src="assets/crown.svg" alt=""></span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><img src="assets/premium-2-4.png" alt=""><button class="card__fav" type="button" aria-label="Seçilmişlərə əlavə et"><img src="assets/heart-card.svg" alt=""></button></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼</span><span class="card__badges"><img src="assets/card-building-2.svg" alt=""><img src="assets/work.svg" alt=""><img src="assets/discount.svg" alt=""><img src="assets/document.svg" alt=""></span></div>
+            <div class="card__name">Baku City Residence Olimpik</div>
+            <div class="card__specs"><span>3 otaqlı</span><span class="dot">136 m</span><span class="dot">12/18 mərtəbə</span></div>
+            <div class="card__foot"><span class="card__date">Bakı, bu gün 12:42</span><span class="card__badges"><img src="assets/diamond.svg" alt=""><img src="assets/crown.svg" alt=""></span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><img src="assets/premium-3-1.png" alt=""><button class="card__fav" type="button" aria-label="Seçilmişlərə əlavə et"><img src="assets/heart-card.svg" alt=""></button></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼-dan</span><span class="card__badges"><img src="assets/card-building-2.svg" alt=""><img src="assets/work.svg" alt=""><img src="assets/discount.svg" alt=""><img src="assets/document.svg" alt=""></span></div>
+            <div class="card__name">Baku City Residence Olimpik</div>
+            <div class="card__specs"><span>3 otaqlı</span><span class="dot">136 m</span><span class="dot">12/18 mərtəbə</span></div>
+            <div class="card__foot"><span class="card__date">Bakı, bu gün 12:42</span><span class="card__badges"><img src="assets/diamond.svg" alt=""><img src="assets/crown.svg" alt=""></span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><img src="assets/premium-3-2.png" alt=""><button class="card__fav" type="button" aria-label="Seçilmişlərə əlavə et"><img src="assets/heart-card.svg" alt=""></button></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼-dan</span><span class="card__badges"><img src="assets/card-building-2.svg" alt=""><img src="assets/work.svg" alt=""><img src="assets/discount.svg" alt=""><img src="assets/document.svg" alt=""></span></div>
+            <div class="card__name">Baku City Residence Olimpik</div>
+            <div class="card__specs"><span>3 otaqlı</span><span class="dot">136 m</span><span class="dot">12/18 mərtəbə</span></div>
+            <div class="card__foot"><span class="card__date">Bakı, bu gün 12:42</span><span class="card__badges"><img src="assets/diamond.svg" alt=""><img src="assets/crown.svg" alt=""></span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><img src="assets/premium-3-3.png" alt=""><button class="card__fav" type="button" aria-label="Seçilmişlərə əlavə et"><img src="assets/heart-card.svg" alt=""></button></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼-dan</span><span class="card__badges"><img src="assets/card-building-2.svg" alt=""><img src="assets/work.svg" alt=""><img src="assets/discount.svg" alt=""><img src="assets/document.svg" alt=""></span></div>
+            <div class="card__name">Baku City Residence Olimpik</div>
+            <div class="card__specs"><span>3 otaqlı</span><span class="dot">136 m</span><span class="dot">12/18 mərtəbə</span></div>
+            <div class="card__foot"><span class="card__date">Bakı, bu gün 12:42</span><span class="card__badges"><img src="assets/diamond.svg" alt=""><img src="assets/crown.svg" alt=""></span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><img src="assets/premium-3-4.png" alt=""><button class="card__fav" type="button" aria-label="Seçilmişlərə əlavə et"><img src="assets/heart-card.svg" alt=""></button></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼-dan</span><span class="card__badges"><img src="assets/card-building-2.svg" alt=""><img src="assets/work.svg" alt=""><img src="assets/discount.svg" alt=""><img src="assets/document.svg" alt=""></span></div>
+            <div class="card__name">Baku City Residence Olimpik</div>
+            <div class="card__specs"><span>3 otaqlı</span><span class="dot">136 m</span><span class="dot">12/18 mərtəbə</span></div>
+            <div class="card__foot"><span class="card__date">Bakı, bu gün 12:42</span><span class="card__badges"><img src="assets/diamond.svg" alt=""><img src="assets/crown.svg" alt=""></span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><img src="assets/premium-4-1.png" alt=""><button class="card__fav" type="button" aria-label="Seçilmişlərə əlavə et"><img src="assets/heart-card.svg" alt=""></button></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼</span><span class="card__badges"><img src="assets/card-building-2.svg" alt=""><img src="assets/work.svg" alt=""><img src="assets/discount.svg" alt=""><img src="assets/document.svg" alt=""></span></div>
+            <div class="card__name">Baku City Residence Olimpik</div>
+            <div class="card__specs"><span>3 otaqlı</span><span class="dot">136 m</span><span class="dot">12/18 mərtəbə</span></div>
+            <div class="card__foot"><span class="card__date">Bakı, bu gün 12:42</span><span class="card__badges"><img src="assets/diamond.svg" alt=""><img src="assets/crown.svg" alt=""></span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><img src="assets/premium-4-2.png" alt=""><button class="card__fav" type="button" aria-label="Seçilmişlərə əlavə et"><img src="assets/heart-card.svg" alt=""></button></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼</span><span class="card__badges"><img src="assets/card-building-2.svg" alt=""><img src="assets/work.svg" alt=""><img src="assets/discount.svg" alt=""><img src="assets/document.svg" alt=""></span></div>
+            <div class="card__name">Baku City Residence Olimpik</div>
+            <div class="card__specs"><span>3 otaqlı</span><span class="dot">136 m</span><span class="dot">12/18 mərtəbə</span></div>
+            <div class="card__foot"><span class="card__date">Bakı, bu gün 12:42</span><span class="card__badges"><img src="assets/diamond.svg" alt=""><img src="assets/crown.svg" alt=""></span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><img src="assets/premium-4-3.png" alt=""><button class="card__fav" type="button" aria-label="Seçilmişlərə əlavə et"><img src="assets/heart-card.svg" alt=""></button></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼</span><span class="card__badges"><img src="assets/card-building-2.svg" alt=""><img src="assets/work.svg" alt=""><img src="assets/discount.svg" alt=""><img src="assets/document.svg" alt=""></span></div>
+            <div class="card__name">Baku City Residence Olimpik</div>
+            <div class="card__specs"><span>3 otaqlı</span><span class="dot">136 m</span><span class="dot">12/18 mərtəbə</span></div>
+            <div class="card__foot"><span class="card__date">Bakı, bu gün 12:42</span><span class="card__badges"><img src="assets/diamond.svg" alt=""><img src="assets/crown.svg" alt=""></span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><img src="assets/premium-4-4.png" alt=""><button class="card__fav" type="button" aria-label="Seçilmişlərə əlavə et"><img src="assets/heart-card.svg" alt=""></button></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼</span><span class="card__badges"><img src="assets/card-building-2.svg" alt=""><img src="assets/work.svg" alt=""><img src="assets/discount.svg" alt=""><img src="assets/document.svg" alt=""></span></div>
+            <div class="card__name">Baku City Residence Olimpik</div>
+            <div class="card__specs"><span>3 otaqlı</span><span class="dot">136 m</span><span class="dot">12/18 mərtəbə</span></div>
+            <div class="card__foot"><span class="card__date">Bakı, bu gün 12:42</span><span class="card__badges"><img src="assets/diamond.svg" alt=""><img src="assets/crown.svg" alt=""></span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><img src="assets/premium-5-1.png" alt=""><button class="card__fav" type="button" aria-label="Seçilmişlərə əlavə et"><img src="assets/heart-card.svg" alt=""></button></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼</span><span class="card__badges"><img src="assets/card-building-2.svg" alt=""><img src="assets/work.svg" alt=""><img src="assets/discount.svg" alt=""><img src="assets/document.svg" alt=""></span></div>
+            <div class="card__name">Baku City Residence Olimpik</div>
+            <div class="card__specs"><span>3 otaqlı</span><span class="dot">136 m</span><span class="dot">12/18 mərtəbə</span></div>
+            <div class="card__foot"><span class="card__date">Bakı, bu gün 12:42</span><span class="card__badges"><img src="assets/diamond.svg" alt=""><img src="assets/crown.svg" alt=""></span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><img src="assets/premium-5-2.png" alt=""><button class="card__fav" type="button" aria-label="Seçilmişlərə əlavə et"><img src="assets/heart-card.svg" alt=""></button></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼</span><span class="card__badges"><img src="assets/card-building-2.svg" alt=""><img src="assets/work.svg" alt=""><img src="assets/discount.svg" alt=""><img src="assets/document.svg" alt=""></span></div>
+            <div class="card__name">Baku City Residence Olimpik</div>
+            <div class="card__specs"><span>3 otaqlı</span><span class="dot">136 m</span><span class="dot">12/18 mərtəbə</span></div>
+            <div class="card__foot"><span class="card__date">Bakı, bu gün 12:42</span><span class="card__badges"><img src="assets/diamond.svg" alt=""><img src="assets/crown.svg" alt=""></span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><img src="assets/premium-5-3.png" alt=""><button class="card__fav" type="button" aria-label="Seçilmişlərə əlavə et"><img src="assets/heart-card.svg" alt=""></button></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼</span><span class="card__badges"><img src="assets/card-building-2.svg" alt=""><img src="assets/work.svg" alt=""><img src="assets/discount.svg" alt=""><img src="assets/document.svg" alt=""></span></div>
+            <div class="card__name">Baku City Residence Olimpik</div>
+            <div class="card__specs"><span>3 otaqlı</span><span class="dot">136 m</span><span class="dot">12/18 mərtəbə</span></div>
+            <div class="card__foot"><span class="card__date">Bakı, bu gün 12:42</span><span class="card__badges"><img src="assets/diamond.svg" alt=""><img src="assets/crown.svg" alt=""></span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"><img src="assets/premium-5-4.png" alt=""><button class="card__fav" type="button" aria-label="Seçilmişlərə əlavə et"><img src="assets/heart-card.svg" alt=""></button></div>
+          <div class="card__body">
+            <div class="card__row"><span class="card__price">317 500₼</span><span class="card__badges"><img src="assets/card-building-2.svg" alt=""><img src="assets/work.svg" alt=""><img src="assets/discount.svg" alt=""><img src="assets/document.svg" alt=""></span></div>
+            <div class="card__name">Baku City Residence Olimpik</div>
+            <div class="card__specs"><span>3 otaqlı</span><span class="dot">136 m</span><span class="dot">12/18 mərtəbə</span></div>
+            <div class="card__foot"><span class="card__date">Bakı, bu gün 12:42</span><span class="card__badges"><img src="assets/diamond.svg" alt=""><img src="assets/crown.svg" alt=""></span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Populyar axtarışlar -->
+  <section class="popular">
+    <div class="popular__inner">
+    <h2 class="popular__title">Populyar axtarışlar</h2>
+    <div class="popular__grid">
+      <ul class="plist">
+        <li class="plist__head">Otaq sayına görə</li>
+        <li>Studiya (22)</li>
+        <li>1-otaqlılar (981)</li>
+        <li>2-otaqlılar (212)</li>
+        <li>3-otaqlılar (12)</li>
+        <li>4-otaqlılar (38)</li>
+        <li class="plist__all"><a href="#">Hamısı 329</a></li>
+      </ul>
+      <ul class="plist">
+        <li class="plist__head">Metro yaxınlığı</li>
+        <li>Sahil (12)</li>
+        <li>28 may (126)</li>
+        <li>Xətai (261)</li>
+        <li>N.Nərimanov (227)</li>
+        <li>Gənclik (261)</li>
+        <li class="plist__all"><a href="#">Hamısı 329</a></li>
+      </ul>
+      <ul class="plist">
+        <li class="plist__head">Rayon</li>
+        <li>Xətai (126)</li>
+        <li>N.Nərimanov (126)</li>
+        <li>Yasamal (169)</li>
+        <li>Sabunçu (12)</li>
+        <li>Səbail (32)</li>
+        <li class="plist__all"><a href="#">Hamısı 329</a></li>
+      </ul>
+      <ul class="plist">
+        <li class="plist__head">Şəhərlər</li>
+        <li>Bakı (14)</li>
+        <li>Gəncə (14)</li>
+        <li>Sumqayıt (14)</li>
+        <li>Şirvan (14)</li>
+        <li>Şəki (14)</li>
+        <li class="plist__all"><a href="#">Hamısı 329</a></li>
+      </ul>
+      <ul class="plist">
+        <li class="plist__head">Növünə görə</li>
+        <li>Mənzil (14)</li>
+        <li>Həyət evi (14)</li>
+        <li>Qaraj (14)</li>
+        <li>Ofis (14)</li>
+        <li>Torpaq (14)</li>
+        <li class="plist__all"><a href="#">Hamısı 329</a></li>
+      </ul>
+      <ul class="plist">
+        <li class="plist__head">Torpaq təyinatı</li>
+        <li>Yaşayış (14)</li>
+        <li>Kommersiya (14)</li>
+        <li>Kənd təsərrüfatı (14)</li>
+        <li>Bağ sahəsi (14)</li>
+      </ul>
+      <ul class="plist">
+        <li class="plist__head">Qiymət aralığı</li>
+        <li>100 000 azn-dək</li>
+        <li>200 000 azn-dək</li>
+        <li>300 000 azn-dək</li>
+        <li>300 000 -azn-dək</li>
+        <li>400 000 -azn-dək</li>
+        <li>500 000 azn üzəri</li>
+      </ul>
+      <ul class="plist">
+        <li class="plist__head">Bina materialı</li>
+        <li>Kərpic (12)</li>
+        <li>Monolit (12)</li>
+        <li>Kərpic-monolit (12)</li>
+        <li>Panel (12)</li>
+        <li>Daş tikili (12)</li>
+        <li class="plist__all"><a href="#">Hamısı 329</a></li>
+      </ul>
+      <ul class="plist">
+        <li class="plist__head">Satış forması</li>
+        <li>Müqavilə (12)</li>
+        <li>Çıxarışı var (12)</li>
+        <li>İpotekaya yararlı (12)</li>
+        <li>Hazır ipotekada (12)</li>
+      </ul>
+      <ul class="plist">
+        <li class="plist__head">Obyekt</li>
+        <li>Mağaza (12)</li>
+        <li>Kafe / Restoran (12)</li>
+        <li>Anbar (12)</li>
+        <li>İstehsalat (12)</li>
+        <li>Otel / Qonaq evi (12)</li>
+        <li class="plist__all"><a href="#">Hamısı 329</a></li>
+      </ul>
+      <ul class="plist">
+        <li class="plist__head">Təmir</li>
+        <li>Təmirsiz (12)</li>
+        <li>Orta təmirli (12)</li>
+        <li>Əla təmirli (12)</li>
+      </ul>
+      <ul class="plist">
+        <li class="plist__head">Sahəsinə görə</li>
+        <li>50 kv-dək (12)</li>
+        <li>50-100 kv (12)</li>
+        <li>100-130 kv (12)</li>
+        <li>130-150 kv (12)</li>
+        <li>150-200 kv (12)</li>
+        <li>200 kv üzəri (12)</li>
+      </ul>
+    </div>
+    </div>
+    <div class="popular__tail"></div>
+  </section>
+
+  <!-- Tətbiq banneri -->
+  <section class="app">
+    <div class="banner">
+      <img class="banner__e242" src="assets/ellipse-242.svg" alt="">
+      <div class="banner__art">
+        <img class="banner__qr" src="assets/app-qr.png" alt="">
+        <img class="banner__e240" src="assets/ellipse-242.svg" alt="">
+        <img class="banner__e241" src="assets/ellipse-241.svg" alt="">
+        <div class="banner__phone"><img src="assets/app-phone.png" alt=""></div>
+      </div>
+      <div class="banner__content">
+        <h2 class="banner__title">Elan axtarmağın<br>daha rahat yolu</h2>
+        <p class="banner__text">Elan.az tətbiqini yükləyin və elanları istənilən vaxt, istənilən yerdə kəşf edin.</p>
+        <div class="banner__buttons">
+          <a class="store" href="#"><img src="assets/playstore.svg" width="18" height="20" alt=""><span class="store__content store__content--gp"><span class="store__sub">Indi yüklə</span><img class="store__gp" src="assets/google-play-text.svg" alt="Google Play"></span></a>
+          <a class="store" href="#"><img src="assets/apple.svg" width="17" height="20" alt=""><span class="store__content store__content--as"><span class="store__sub">Indi yüklə</span><span class="store__name">App Store</span></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+    <div class="footer__top">
+      <div class="footer__logo"><img src="assets/logo.svg" alt="elan.az"></div>
+      <div class="footer__cols">
+        <div class="footer__links">
+          <ul class="fcol">
+            <li class="fcol__head">Sürətli keçidlər</li>
+            <li><a href="#">Elan yerləşdir</a></li>
+            <li><a href="#">Vasitəçi ol</a></li>
+            <li><a href="#">Kompleks yarat</a></li>
+            <li><a href="#">Şəxsi kabinet</a></li>
+          </ul>
+          <ul class="fcol">
+            <li class="fcol__head fcol__head--dark">İstifadə şərtləri</li>
+            <li><a href="#">Qaydalar</a></li>
+            <li><a href="#">İstifadəçi razılaşması</a></li>
+            <li><a href="#">Məxfilik siyasəti</a></li>
+          </ul>
+        </div>
+        <div class="footer__right">
+          <div class="footer__social">
+            <h5>Sosial şəbəkələr</h5>
+            <div class="social">
+              <a class="social__link" href="#" aria-label="Instagram"><img src="assets/social-instagram.svg" width="16" height="16" alt=""></a>
+              <a class="social__link" href="#" aria-label="TikTok"><img src="assets/social-tiktok.svg" width="16" height="16" alt=""></a>
+              <a class="social__link" href="#" aria-label="LinkedIn"><img src="assets/social-linkedin.svg" width="16" height="16" alt=""></a>
+              <a class="social__link" href="#" aria-label="Facebook"><img src="assets/social-facebook.svg" width="16" height="16" alt=""></a>
+            </div>
+          </div>
+          <div class="footer__contact">
+            <h5>Sual və təklifləriniz var?</h5>
+            <a class="btn-write" href="#"><img src="assets/send-message.svg" width="20" height="20" alt="">Bizə yazın</a>
+            <p>Suallarınızı cavablandırmaq və sizə daha yaxşı xidmət göstərmək üçün buradayıq. Bizimlə əlaqə saxlayın.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Bütün hüquqlar qorunur. Elan.az</span>
+      <div class="footer__contacts">
+        <span><img src="assets/mention.svg" width="16" height="16" alt="">elanaz@mail.com</span>
+        <span><img src="assets/call.svg" width="16" height="16" alt="">012 383 64 53</span>
+      </div>
+    </div>
+    </div>
+  </footer>
+
+  <!-- Yan menyu (planşet <950px): header-dəki bütün linklər, ikonlar və profil burada -->
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer__backdrop" data-drawer-close></div>
+    <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menyu">
+      <div class="drawer__head">
+        <img src="assets/logo.svg" alt="elan.az">
+        <button class="drawer__close" type="button" aria-label="Bağla" data-drawer-close>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="#181d27" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <a class="drawer__user" href="#"><span class="avatar">NT</span><span><b>Şəxsi kabinet</b><small>Profil və elanlarım</small></span></a>
+      <a class="btn-add drawer__cta" href="#"><img src="assets/plus.svg" width="20" height="20" alt="">Elan yerləşdir</a>
+      <nav class="drawer__nav" aria-label="Bölmələr">
+        <a href="#">Alqı-satqı</a>
+        <a href="#">Kirayə</a>
+        <a href="#">Yaşayış kompleksləri</a>
+        <a href="#">Agentliklər</a>
+        <a href="#"><img src="assets/pasha.png" width="16" height="16" alt="">Pasha Real Estate</a>
+      </nav>
+      <div class="drawer__divider"></div>
+      <nav class="drawer__tools" aria-label="Alətlər">
+        <a href="#"><img src="assets/scale.svg" width="20" height="20" alt="">Müqayisə</a>
+        <a href="#"><img src="assets/network-world.svg" width="20" height="20" alt="">Dil</a>
+        <a href="#"><img src="assets/coin-swap.svg" width="20" height="20" alt="">Valyuta</a>
+        <a href="#"><img src="assets/square-message.svg" width="20" height="20" alt="">Mesajlar</a>
+        <a href="#"><span class="nav__heart"><img src="assets/heart-outline.svg" alt=""></span>Seçilmişlər</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Üzən çat düyməsi -->
+  <button class="chat" type="button" aria-label="Çat"><span class="chat__icon"><img src="assets/chat.svg" alt=""></span></button>
+
+</body>
+</html>
