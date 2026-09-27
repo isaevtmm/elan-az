@@ -27,15 +27,15 @@
 
   /* 2) Yan menyu (burger) — 950px-dən aşağı header linkləri, alət ikonları və profil burada açılır */
   var drawer = document.getElementById('drawer');
-  var burger = document.querySelector('.burger');
-  if (drawer && burger) {
+  var burgers = document.querySelectorAll('.burger');
+  if (drawer && burgers.length) {
     function setOpen(open) {
       drawer.classList.toggle('is-open', open);
       document.body.classList.toggle('drawer-open', open);
       drawer.setAttribute('aria-hidden', String(!open));
-      burger.setAttribute('aria-expanded', String(open));
+      burgers.forEach(function (b) { b.setAttribute('aria-expanded', String(open)); });
     }
-    burger.addEventListener('click', function () { setOpen(!drawer.classList.contains('is-open')); });
+    burgers.forEach(function (b) { b.addEventListener('click', function () { setOpen(!drawer.classList.contains('is-open')); }); });
     drawer.querySelectorAll('[data-drawer-close]').forEach(function (el) {
       el.addEventListener('click', function () { setOpen(false); });
     });
